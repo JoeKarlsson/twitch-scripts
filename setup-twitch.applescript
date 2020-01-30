@@ -84,23 +84,23 @@ end tell
 -- NIGHTBOT CUSTOM COMMAND SETTING --
 ---------------------------------------------------
 
--- fetch last Nightbot !whatamidoing status
-set lastStatus to (do shell script "/Users/noopkat/bin/twitch-scripts/getNightbotStatus.sh")
+-- -- fetch last Nightbot !whatamidoing status
+-- set lastStatus to (do shell script "/Users/joekarlsson/Documents/dev/twitch-scriptsgetNightbotStatus.sh")
 
--- prompt for Nighbot !whatamidoing command status
-set nightbotStatus to the text returned of (display dialog "What are you working on today?" default answer lastStatus)
+-- -- prompt for Nighbot !whatamidoing command status
+-- set nightbotStatus to the text returned of (display dialog "What are you working on today?" default answer lastStatus)
 
--- send new status to Nightbot
-set nightbotResult to do shell script ("/Users/noopkat/bin/twitch-scripts/setNightbotStatus.sh \"" & nightbotStatus & "\"")
+-- -- send new status to Nightbot
+-- set nightbotResult to do shell script ("/Users/joekarlsson/Documents/dev/twitch-scripts/setNightbotStatus.sh \"" & nightbotStatus & "\"")
 
-display notification nightbotResult with title "Nightbot Status" sound name "Glass"
+-- display notification nightbotResult with title "Nightbot Status" sound name "Glass"
 
 ---------------------------------------------------
 -- OTHER STUFF --
 ---------------------------------------------------
 
 -- run twitch chat tools for mods as a daemon
-do shell script "/usr/local/bin/node /Users/noopkat/bin/twitch-scripts/twitch-mod-tools/modtooldaemon.js > /dev/null 2>&1 &"
+do shell script "/usr/local/bin/node /Users/joekarlsson/Documents/dev/twitch-scripts/twitch-mod-tools/modtooldaemon.js > /dev/null 2>&1 &"
 
 -- disable TextExpander
 tell application "System Events" to keystroke "j" using {command down, shift down, option down, control down}
