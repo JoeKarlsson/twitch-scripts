@@ -2,7 +2,7 @@
 
 NIGHTBOT_COMMAND="<command id>"
 
-SCRIPT_DIR="/Users/noopkat/bin/twitch-scripts"
+SCRIPT_DIR="/Users/joekarlsson/Documents/dev/twitch-scripts"
 CREDS_FILE="${SCRIPT_DIR}/nightbot-creds.txt"
 TOKENS_FILE="${SCRIPT_DIR}/nightbot-tokens.txt"
 
